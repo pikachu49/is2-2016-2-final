@@ -1,9 +1,11 @@
 import 'dart:async';
 import 'package:di/di.dart';
 
+
 import 'package:postgresql/postgresql.dart' as pg;
 import '../config/db_connection.dart';
-import '../model/user.dart';
+import '../model/producto.dart';
+
 
 class ProductoRepository {
   DbConnection connection;
@@ -19,7 +21,7 @@ class ProductoRepository {
     return (await connection.query('SELECT * FROM "producto"')).map(mapRowToProducto);
   }
 
-  User mapRowToProducto(pg.Row row) {
+  Producto mapRowToProducto(pg.Row row) {
     return new Producto()
       ..id = row.id
       ..nombre = row.nombre
@@ -27,3 +29,4 @@ class ProductoRepository {
       ..precio = row.precio;
   }
 }
+

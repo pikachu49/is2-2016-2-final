@@ -8,7 +8,7 @@ import '../model/producto.dart';
 class ProductoRest {
   ProductoService productoService;
 
-  ProductoRest(this.userService);
+  ProductoRest(this.productoService);
 
   @ApiMethod(path: 'producto/{id}')
   Future<Producto> getProducto(String id) {

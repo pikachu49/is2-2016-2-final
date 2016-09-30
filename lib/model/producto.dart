@@ -1,4 +1,4 @@
-class User {
+class Producto {
   int id;
   String nombre;
   String categoria;
