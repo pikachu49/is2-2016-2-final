@@ -7,6 +7,7 @@ import 'package:logistic_app/rest/user_rest.dart';
 import 'package:logistic_app/rest/hello_rest.dart';
 import 'package:logistic_app/rest/persona_rest.dart';
 import 'package:logistic_app/rest/usuario_rest.dart';
+import 'package:logistic_app/rest/administrador_rest.dart';
 
 
 
@@ -64,6 +65,7 @@ main() async {
   _apiServer.addApi(injector.get(HelloRest));
   _apiServer.addApi(injector.get(PersonaRest));
   _apiServer.addApi(injector.get(UsuarioRest));
+  _apiServer.addApi(injector.get(AdministradorRest));
   HttpServer server = await HttpServer.bind(InternetAddress.ANY_IP_V4, 9090);
 //  server.listen(_apiServer.httpRequestHandler);
   server.listen(configureHttpServer);
