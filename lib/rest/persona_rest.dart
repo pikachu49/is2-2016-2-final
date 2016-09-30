@@ -16,7 +16,7 @@ class PersonaRest {
   }
 
   @ApiMethod(path: 'all')
-  Future<List<Persona>> getPersons() {
+  Future<List<Persona> > getPersons() {
     return personaService.getAll();
   }
 }

@@ -5,10 +5,9 @@ import 'package:rpc/rpc.dart';
 import 'package:logistic_app/config/injector.dart';
 import 'package:logistic_app/rest/user_rest.dart';
 import 'package:logistic_app/rest/hello_rest.dart';
+
 import 'package:logistic_app/rest/persona_rest.dart';
-
 import 'package:logistic_app/rest/producto_rest.dart';
-
 import 'package:logistic_app/rest/usuario_rest.dart';
 
 
