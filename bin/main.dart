@@ -5,10 +5,10 @@ import 'package:rpc/rpc.dart';
 import 'package:logistic_app/config/injector.dart';
 import 'package:logistic_app/rest/user_rest.dart';
 import 'package:logistic_app/rest/hello_rest.dart';
+
 import 'package:logistic_app/rest/persona_rest.dart';
-
 import 'package:logistic_app/rest/producto_rest.dart';
-
+import 'package:logistic_app/rest/proveedor_rest.dart';
 import 'package:logistic_app/rest/usuario_rest.dart';
 
 
@@ -64,8 +64,10 @@ Future configureHttpServer(HttpRequest request) async {
 main() async {
   _apiServer.addApi(injector.get(UserRest));
   _apiServer.addApi(injector.get(HelloRest));
+
   _apiServer.addApi(injector.get(PersonaRest));
   _apiServer.addApi(injector.get(ProductoRest));
+  _apiServer.addApi(injector.get(ProveedorRest));
   _apiServer.addApi(injector.get(UsuarioRest));
   HttpServer server = await HttpServer.bind(InternetAddress.ANY_IP_V4, 9090);
 //  server.listen(_apiServer.httpRequestHandler);

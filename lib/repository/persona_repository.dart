@@ -7,7 +7,6 @@ import '../model/persona.dart';
 
 class PersonaRepository {
   DbConnection connection;
-
   PersonaRepository(this.connection);
 
   Future<Persona> find(int id) async {
