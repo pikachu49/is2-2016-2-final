@@ -30,11 +30,20 @@ src/
         index.ts
         statics/..
         routing/..
-    
-# Server bundle files
-dist/..
 
 # Other files
 ..
 
 ```
+
+## Requirements
+
+#### Development
+- [NPM]
+- [Node.js]
+- [Gulp]
+
+#### Production
+- [NPM]
+- [Node.js]
+- [PM2]
