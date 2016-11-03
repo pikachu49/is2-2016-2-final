@@ -1,7 +1,7 @@
 {
     "domain": "xyz-a0.mlab.com",
     "port": 12345,
-    "dbname": "db",
+    "dbname": "dbtest",
     "username": "username",
     "password": "password"
 }
