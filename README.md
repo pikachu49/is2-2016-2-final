@@ -7,9 +7,11 @@ A Node.js based server using express and typescript (Angular2 for the client sid
 ```bash
 
 # Configuration files
-webpack.config.js
 package.json
+webpack.config.js
 gulpfile.js
+tsconfig.json
+typings.json
 
 # Server Sources
 src/
