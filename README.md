@@ -49,3 +49,12 @@ src/
 - [NPM](https://www.npmjs.com)
 - [Node.js](https://nodejs.org)
 - [PM2](https://github.com/Unitech/pm2)
+
+## Install
+```bash
+# Install npm dependencies
+npm Install
+
+# Setup server
+gulp init
+```
