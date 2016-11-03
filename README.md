@@ -53,7 +53,7 @@ src/
 ## Install
 ```bash
 # Install npm dependencies
-npm Install
+npm install
 
 # Setup server
 gulp init
