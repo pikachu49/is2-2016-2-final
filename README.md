@@ -58,3 +58,9 @@ npm install
 # Setup server
 gulp init
 ```
+
+## Start server
+```bash
+# Start server
+gulp serve [--build]
+```
