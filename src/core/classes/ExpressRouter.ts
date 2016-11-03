@@ -1,6 +1,5 @@
 
 // Imports
-	import {config} from '../../config.ts';
 	import * as express from 'express';
 
 // Exports

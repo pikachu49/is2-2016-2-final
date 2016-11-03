@@ -1,22 +1,23 @@
 
 // Imports
-	import {config} from '../../config.ts';
 	import {MongoClient, ObjectID} from 'mongodb';
 	import * as mongoose from 'mongoose';
 	import * as Q from 'q';
-	// import * as promisedMongo from 'promised-mongo';
-	// import promisedMongo = require('promised-mongo');
 
 // Setup
-	// console.log(mongoose);
 	let db: any;
-	setTimeout(function () {
-		MongoClient.connect(config.servers.database.url, function (err, _db) {
-			if (err) throw err;
+	export function connectDatabase (databaseUrl: string) {
+		var deferred = Q.defer();
+		MongoClient.connect(databaseUrl, function (err, _db) {
+			if (err) {
+				deferred.reject(err);
+				return;
+			}
 			db = _db;
-			console.log('Connected succesfully to mongodb');
+			deferred.resolve();
 		});
-	}, 1000);
+		return deferred.promise;
+	}
 
 // Exports
 	export class MongoModel {
