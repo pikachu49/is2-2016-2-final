@@ -1,0 +1,18 @@
+{
+
+    "registerPerson": { "path": "/api/register", "method": "POST" },
+    "createSession": { "path": "/api/session", "method": "POST" },
+    "deleteSession": { "path": "/api/session/:sessionId", "method": "DELETE" },
+
+    "registerUser": { "path": "/api/users", "method": "POST" },
+    "registerProvider": { "path": "/api/providers", "method": "POST" },
+    "registerProduct": { "path": "/api/providers/:providerId/products", "method": "POST" },
+    "registerLot": { "path": "/api/products/:productsId/lots", "method": "POST" },
+
+    "getProviders": { "path": "/api/providers", "method": "GET" },
+    "getProviderProducts": { "path": "/api/providers/:providerId/products", "method": "GET" },
+    "getProduct": { "path": "/api//products/:productId", "method": "GET" },
+    "getProductLots": { "path": "/api/products/:productId/lots", "method": "GET" },
+    "getLot": { "path": "/api/lots/:lotId", "method": "GET" }
+
+}
