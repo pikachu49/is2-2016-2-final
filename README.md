@@ -39,11 +39,11 @@ src/
 ## Requirements
 
 #### Development
-- [NPM]
-- [Node.js]
-- [Gulp]
+- [NPM](https://www.npmjs.com)
+- [Node.js](https://nodejs.org)
+- [Gulp](http://gulpjs.com/)
 
 #### Production
-- [NPM]
-- [Node.js]
-- [PM2]
+- [NPM](https://www.npmjs.com)
+- [Node.js](https://nodejs.org)
+- [PM2](https://github.com/Unitech/pm2)
