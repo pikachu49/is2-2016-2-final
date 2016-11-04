@@ -5,7 +5,7 @@ import config from '../../settings/index.ts';
 
 export function registerLot (lotData: LotModel) {
     var deferred = q.defer();
-    var model = new MongoModel(config.dbConfig.models.lot.name);
+    var model = new MongoModel(config.dbConfig.models.lot.code);
     model.insert(lotData).then(function (lotInstance) {
         deferred.resolve(lotInstance);
     }).catch(deferred.reject);
