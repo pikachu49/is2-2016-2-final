@@ -12,7 +12,7 @@ export function registerProduct (productData: ProductModel) {
     return deferred.promise;
 }
 
-export function getProductById (productId: ProductModel) {
+export function getProductById (productId: string) {
     var deferred = q.defer();
     var model = new MongoModel(config.dbConfig.models.product.name);
     model.findById(productId).then(function (productInstance) {
