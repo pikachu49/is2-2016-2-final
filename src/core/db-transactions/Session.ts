@@ -14,7 +14,7 @@ export function registerSession (sessionData: SessionModel) {
 
 export function getSessionById (sessionId: string) {
     var deferred = q.defer();
-    var model = new MongoModel(config.dbConfig.models.session.name);
+    var model = new MongoModel(config.dbConfig.models.session.key);
     model.findById(sessionId).then(function (sessionInstance) {
         deferred.resolve(sessionInstance);
     }).catch(deferred.reject);
