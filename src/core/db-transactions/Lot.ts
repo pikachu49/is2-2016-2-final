@@ -12,7 +12,7 @@ export function registerLot (lotData: LotModel) {
     return deferred.promise;
 }
 
-export function getLotById (lotId: LotModel) {
+export function getLotById (lotId: string) {
     var deferred = q.defer();
     var model = new MongoModel(config.dbConfig.models.lot.code);
     model.findById(lotId).then(function (lotInstance) {
