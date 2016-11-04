@@ -19,6 +19,10 @@ export class ExpressServer {
             this.server.use(route, express.static(staticsPath));
         }
 
+        public addRouter (path: string, router: any) {
+            this.server.use(path, router);
+        }
+
         public listen (port: number) {
             var deferred = q.defer();
             this.server.listen(port, deferred.resolve);
