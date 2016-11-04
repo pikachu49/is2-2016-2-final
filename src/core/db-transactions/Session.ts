@@ -5,7 +5,7 @@ import config from '../../settings/index.ts';
 
 export function registerSession (sessionData: SessionModel) {
     var deferred = q.defer();
-    var model = new MongoModel(config.dbConfig.models.session.key);
+    var model = new MongoModel(config.dbConfig.models.session.name);
     model.insert(sessionData).then(function (sessionInstance) {
         deferred.resolve(sessionInstance);
     }).catch(deferred.reject);
@@ -14,7 +14,7 @@ export function registerSession (sessionData: SessionModel) {
 
 export function getSessionById (sessionId: string) {
     var deferred = q.defer();
-    var model = new MongoModel(config.dbConfig.models.session.key);
+    var model = new MongoModel(config.dbConfig.models.session.name);
     model.findById(sessionId).then(function (sessionInstance) {
         deferred.resolve(sessionInstance);
     }).catch(deferred.reject);
