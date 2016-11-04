@@ -12,7 +12,7 @@ export function registerPerson (personData: PersonModel) {
     return deferred.promise;    
 }
 
-export function getPersonById (personId: PersonModel) {
+export function getPersonById (personId: string) {
     var deferred = q.defer();
     var model = new MongoModel(config.dbConfig.models.person.name);
     model.findById(personId).then(function (personInstance) {
