@@ -3,5 +3,12 @@
     "port": 12345,
     "dbname": "dbtest",
     "username": "username",
-    "password": "password"
+    "password": "password",
+    "models": {
+        "person": { "name": "person" },
+        "lot": { "name": "lot" },
+        "product": { "name": "product" },
+        "provider": { "name": "provider" },
+        "session": { "name": "session" }
+    }
 }

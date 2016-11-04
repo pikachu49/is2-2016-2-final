@@ -9,6 +9,7 @@
             password: string;
             dbname: string;
             url: string;
+            models: any;
         }
         email?: {
             email: string;
