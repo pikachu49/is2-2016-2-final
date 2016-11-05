@@ -20,3 +20,5 @@ export function getProductById (productId: string): Promise<ProductModel> {
     }).catch(deferred.reject);
     return deferred.promise;
 }
+
+

@@ -20,3 +20,14 @@ export function getLotById (lotId: string): Promise<LotModel> {
     }).catch(deferred.reject);
     return deferred.promise;
 }
+
+export function getLotsByProductId (productId: string): Promise<LotModel[]> {
+    var deferred = q.defer();
+    var model = new MongoModel(config.dbConfig.models.lot.name);
+    model.findAll({
+        productId: productId
+    }).then(function (lotsInstances) {
+        deferred.resolve(lotsInstances);
+    }).catch(deferred.reject);
+    return deferred.promise;
+}
