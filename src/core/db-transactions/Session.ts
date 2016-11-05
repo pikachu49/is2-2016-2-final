@@ -3,7 +3,7 @@ import {MongoModel} from '../classes/MongoModel.ts';
 import * as q from 'q';
 import config from '../../settings/index.ts';
 
-export function registerSession (sessionData: SessionModel) {
+export function registerSession (sessionData: SessionModel): Promise<SessionModel> {
     var deferred = q.defer();
     var model = new MongoModel(config.dbConfig.models.session.name);
     model.insert(sessionData).then(function (sessionInstance) {
@@ -12,7 +12,7 @@ export function registerSession (sessionData: SessionModel) {
     return deferred.promise;
 }
 
-export function getSessionById (sessionId: string) {
+export function getSessionById (sessionId: string): Promise<SessionModel> {
     var deferred = q.defer();
     var model = new MongoModel(config.dbConfig.models.session.name);
     model.findById(sessionId).then(function (sessionInstance) {

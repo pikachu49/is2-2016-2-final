@@ -3,7 +3,7 @@ import {MongoModel} from '../classes/MongoModel.ts';
 import * as q from 'q';
 import config from '../../settings/index.ts';
 
-export function registerProduct (productData: ProductModel) {
+export function registerProduct (productData: ProductModel): Promise<ProductModel> {
     var deferred = q.defer();
     var model = new MongoModel(config.dbConfig.models.product.name);
     model.insert(productData).then(function (productInstance) {
@@ -12,7 +12,7 @@ export function registerProduct (productData: ProductModel) {
     return deferred.promise;
 }
 
-export function getProductById (productId: string) {
+export function getProductById (productId: string): Promise<ProductModel> {
     var deferred = q.defer();
     var model = new MongoModel(config.dbConfig.models.product.name);
     model.findById(productId).then(function (productInstance) {

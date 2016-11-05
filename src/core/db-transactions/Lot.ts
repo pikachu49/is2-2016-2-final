@@ -3,7 +3,7 @@ import {MongoModel} from '../classes/MongoModel.ts';
 import * as q from 'q';
 import config from '../../settings/index.ts';
 
-export function registerLot (lotData: LotModel) {
+export function registerLot (lotData: LotModel): Promise<LotModel> {
     var deferred = q.defer();
     var model = new MongoModel(config.dbConfig.models.lot.name);
     model.insert(lotData).then(function (lotInstance) {
@@ -12,7 +12,7 @@ export function registerLot (lotData: LotModel) {
     return deferred.promise;
 }
 
-export function getLotById (lotId: string) {
+export function getLotById (lotId: string): Promise<LotModel> {
     var deferred = q.defer();
     var model = new MongoModel(config.dbConfig.models.lot.name);
     model.findById(lotId).then(function (lotInstance) {

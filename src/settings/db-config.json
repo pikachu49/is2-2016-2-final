@@ -1,9 +1,9 @@
 {
-    "domain": "xyz-a0.mlab.com",
-    "port": 12345,
+    "domain": "ds143707.mlab.com",
+    "port": 43707,
     "dbname": "dbtest",
-    "username": "username",
-    "password": "password",
+    "username": "testuser",
+    "password": "pikachu49",
     "models": {
         "person": { "name": "person" },
         "lot": { "name": "lot" },

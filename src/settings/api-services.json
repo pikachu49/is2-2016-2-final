@@ -1,19 +1,74 @@
 {
 
-    "registerPerson": { "path": "/register", "method": "POST" },
-    "createSession": { "path": "/session", "method": "POST" },
-    "deleteSession": { "path": "/session/:sessionId", "method": "DELETE" },
+    "registerPerson": {
+        "path": "/register",
+        "method": "POST",
+        "schema": { "required": [] }
+    },
 
-    "registerUser": { "path": "/users", "method": "POST" },
-    "registerProvider": { "path": "/providers", "method": "POST" },
-    "registerProviderProduct": { "path": "/providers/:providerId/products", "method": "POST" },
-    "registerProductLot": { "path": "/products/:productsId/lots", "method": "POST" },
+    "createSession": {
+        "path": "/session",
+        "method": "POST",
+        "schema": { "required": [] }
+    },
 
-    "getProviders": { "path": "/providers", "method": "GET" },
-    "getProvider": { "path": "/providers/:providerId", "method": "GET" },
-    "getProviderProducts": { "path": "/providers/:providerId/products", "method": "GET" },
-    "getProduct": { "path": "/products/:productId", "method": "GET" },
-    "getProductLots": { "path": "/products/:productId/lots", "method": "GET" },
-    "getLot": { "path": "/lots/:lotId", "method": "GET" }
+    "deleteSession": {
+        "path": "/session/:sessionId",
+        "method": "DELETE"
+    },
+
+    "registerUser": {
+        "path": "/users",
+        "method": "POST",
+        "schema": { "required": [] }
+    },
+
+    "registerProvider": {
+        "path": "/providers",
+        "method": "POST",
+        "schema": { "required": ["name"] }
+    },
+
+    "registerProviderProduct": {
+        "path": "/providers/:providerId/products",
+        "method": "POST",
+        "schema": { "required": [] }
+    },
+
+    "registerProductLot": {
+        "path": "/products/:productsId/lots",
+        "method": "POST",
+        "schema": { "required": [] }
+    },
+
+    "getProviders": {
+        "path": "/providers",
+        "method": "GET"
+    },
+
+    "getProvider": {
+        "path": "/providers/:providerId",
+        "method": "GET"
+    },
+
+    "getProviderProducts": {
+        "path": "/providers/:providerId/products",
+        "method": "GET"
+    },
+
+    "getProduct": {
+        "path": "/products/:productId",
+        "method": "GET"
+    },
+
+    "getProductLots": {
+        "path": "/products/:productId/lots",
+        "method": "GET"
+    },
+
+    "getLot": {
+        "path": "/lots/:lotId",
+        "method": "GET"
+    }
 
 }
