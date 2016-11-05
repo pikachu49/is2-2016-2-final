@@ -23,7 +23,7 @@
 					 */
 						var invalidUrlParams = this.validateUrlParams(service.url, req.params);
 						if (invalidUrlParams.length) {
-							res.status(401);
+							res.status(400);
 							res.json({ invalidUrlParams: invalidUrlParams });
 							res.end();
 							return;
@@ -36,7 +36,7 @@
 							var validator = new JSONSchema.Validator();
 							var validationResults = validator.validate(req.body, service.schema);
 							if (validationResults.errors.length) {
-								res.status(401);
+								res.status(400);
 								res.json({
 									invalidParams: validationResults.errors
 								});

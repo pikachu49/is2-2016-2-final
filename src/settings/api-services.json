@@ -36,9 +36,9 @@
     },
 
     "registerProductLot": {
-        "path": "/products/:productsId/lots",
+        "path": "/products/:productId/lots",
         "method": "POST",
-        "schema": { "required": [] }
+        "schema": { "required": ["code"] }
     },
 
     "getProviders": {
