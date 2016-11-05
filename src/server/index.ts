@@ -16,7 +16,7 @@ server.use(bodyParser.json());
 server.use(cookieParser());
 
 // Setup Server
-server.setupStatics('/statics', path.join(__dirname, 'statics'));
+server.server.use('/statics', express.static(path.join(process.cwd(), 'src/server/statics')));
 
 // Setup routers
 server.addRouter('/api', validationRouter.router);

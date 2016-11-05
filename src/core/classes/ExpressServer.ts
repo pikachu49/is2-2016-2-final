@@ -1,5 +1,6 @@
 import * as express from 'express';
 import * as q from 'q';
+import * as path from 'path';
 
 export class ExpressServer {
 
@@ -16,7 +17,7 @@ export class ExpressServer {
         }
 
         public setupStatics (route: string, staticsPath: any) {
-            this.server.use(route, express.static(staticsPath));
+            this.server.use(route, express.static( path.join(__dirname, staticsPath) ));
         }
 
         public addRouter (path: string, router: any) {
