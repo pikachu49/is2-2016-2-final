@@ -24,7 +24,7 @@ export function getProviderById (providerId: string): Promise<ProviderModel> {
 export function getProviders (): Promise<ProviderModel[]> {
     var deferred = q.defer();
     var model = new MongoModel(config.dbConfig.models.provider.name);
-    model.find({}).then(function (providerInstances) {
+    model.findAll({}).then(function (providerInstances) {
         deferred.resolve(providerInstances);
     }).catch(deferred.reject);
     return deferred.promise;
