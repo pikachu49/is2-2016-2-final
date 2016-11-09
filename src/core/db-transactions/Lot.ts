@@ -1,4 +1,6 @@
 import {Lot as LotModel} from '../db-models/Lot.ts';
+// import {Product as ProductModel} from '../db-models/Product.ts';
+
 import {MongoModel} from '../classes/MongoModel.ts';
 import * as q from 'q';
 import config from '../../settings/index.ts';
@@ -25,7 +27,7 @@ export function getLotsByProductId (productId: string): Promise<LotModel[]> {
     var deferred = q.defer();
     var model = new MongoModel(config.dbConfig.models.lot.name);
     model.findAll({
-        productId: productId
+        productId:productId
     }).then(function (lotsInstances) {
         deferred.resolve(lotsInstances);
     }).catch(deferred.reject);
