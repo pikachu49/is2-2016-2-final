@@ -1,7 +1,3 @@
-// export function handler (req, res, next) {
-//     res.end(':D');
-// }
-
 import {RequestParams} from './interface.ts';
 import {getProviderByProductId} from '../../../../../core/db-transactions/product.ts';
 
