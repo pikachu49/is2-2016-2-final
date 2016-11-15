@@ -4,7 +4,7 @@ import {Component, OnInit} from '@angular/core';
     styles: [require('./style.styl').toString()],
     template: require('./template.jade')()
 })
-export class LoginComponent implements OnInit {
+export class RegisterComponent implements OnInit {
 
     // Attributes
 
