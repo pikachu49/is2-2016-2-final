@@ -3,6 +3,7 @@
 	var shell = require('shelljs');
 	var path = require('path');
 	var open = require('open');
+	var gulp = require('gulp');
 	var runSequence = require('run-sequence');
 	var ts = require('gulp-typescript');
 	var package = require('./package.json');
@@ -26,6 +27,9 @@
 					(global ? ' --global' : '')
 				);
 			}
+		});
+		gulp.task('default', function() {
+  	        	// place code for your default task here
 		});
 
 		gulp.task('typings:search', function(module) {

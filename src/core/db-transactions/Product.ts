@@ -21,4 +21,13 @@ export function getProductById (productId: string): Promise<ProductModel> {
     return deferred.promise;
 }
 
-
+export function getProviderByProductId (providerId: string): Promise<ProductModel[]> {
+    var deferred = q.defer();
+    var model = new MongoModel(config.dbConfig.models.product.name);
+    model.findAll({
+        providerId: providerId
+    }).then(function (productsInstances){
+        deferred.resolve(productsInstances);
+    }).catch(deferred.reject);
+    return deferred.promise;
+}

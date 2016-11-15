@@ -1,4 +1,5 @@
 import {Provider as ProviderModel} from '../db-models/Provider.ts';
+import {Product as ProductModel} from '../db-models/Product.ts';
 import {MongoModel} from '../classes/MongoModel.ts';
 import * as q from 'q';
 import config from '../../settings/index.ts';
@@ -26,6 +27,16 @@ export function getProviders (): Promise<ProviderModel[]> {
     var model = new MongoModel(config.dbConfig.models.provider.name);
     model.findAll({}).then(function (providerInstances) {
         deferred.resolve(providerInstances);
+    }).catch(deferred.reject);
+    return deferred.promise;
+}
+export function getProviderProductsByProviderId (providerId: string): Promise<ProductModel>{
+    var deferred=q.defer();
+    var model= new MongoModel(config.dbConfig.models.product.name);
+    model.findAll({
+        providerId:providerId
+    }).then(function (productInstances){
+        deferred.resolve(productInstances);
     }).catch(deferred.reject);
     return deferred.promise;
 }
