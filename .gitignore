@@ -39,3 +39,8 @@ jspm_packages
 typings
 
 dist
+
+node_modules
+dist
+npm-debug.log
+typings

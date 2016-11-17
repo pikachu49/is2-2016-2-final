@@ -2,6 +2,13 @@
     "domain": "ds143707.mlab.com",
     "port": 43707,
     "dbname": "dbtest",
-    "username": "rojobernedois2@gmail.com",
-    "password": "pikachu49"
+    "username": "testuser",
+    "password": "pikachu49",
+    "models": {
+        "person": { "name": "person" },
+        "lot": { "name": "lot" },
+        "product": { "name": "product" },
+        "provider": { "name": "provider" },
+        "session": { "name": "session" }
+    }
 }

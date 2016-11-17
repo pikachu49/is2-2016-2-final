@@ -10,8 +10,8 @@
 			public router: any;
 
 		// Methods
-			constructor (path: string) {
-				this.path = path;
+			constructor (path?: string) {
+				if (path) this.path = path;
 				this.router = express.Router();
 			}
 			public addRoute (method: string, path: string, handler: Function) {

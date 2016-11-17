@@ -1,4 +1,6 @@
 
 export interface BaseModel {
-    id: string;
+    id?: string;
+    _id?: string;
+    timestamp?: number;
 }

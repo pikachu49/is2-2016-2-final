@@ -1,0 +1,41 @@
+{
+	"id": "6bda45b3-8f55-3a3c-7422-db7c970959c1",
+	"name": "is2",
+	"description": "",
+	"order": [
+		"49ceb24a-a7a8-8450-207b-46ee442ee341"
+	],
+	"folders": [],
+	"timestamp": 1478300285193,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "49ceb24a-a7a8-8450-207b-46ee442ee341",
+			"headers": "",
+			"url": "localhost:3000/api/providers",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "6bda45b3-8f55-3a3c-7422-db7c970959c1",
+			"data": [
+				{
+					"key": "name",
+					"value": "New Provider",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "localhost:3000/api/providers",
+			"description": "Create provider",
+			"descriptionFormat": "html",
+			"time": 1478300664537,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
