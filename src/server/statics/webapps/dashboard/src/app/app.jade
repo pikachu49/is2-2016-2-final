@@ -7,6 +7,7 @@ div.container
         div(*ngFor="let module of modules")
             button.subtitle {{ module.name }}
             div.actions-container
-                button(*ngFor="let action of module.actions") {{ action.name }}
+                a(routerLink="{{ action.path }}", *ngFor="let action of module.actions")
+                    button {{ action.name }}
 
     div.top-bar
