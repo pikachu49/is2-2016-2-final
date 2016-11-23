@@ -1,5 +1,12 @@
 div.container
-    h1 App
-    p Demo app :D
 
-    router-outlet
+    div.content-container
+        router-outlet
+
+    div.left-panel
+        div(*ngFor="let module of modules")
+            button.subtitle {{ module.name }}
+            div.actions-container
+                button(*ngFor="let action of module.actions") {{ action.name }}
+
+    div.top-bar
