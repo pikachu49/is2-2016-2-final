@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Resources} from './services/Resources.ts';
 
 interface IAction {
 	name: string;
@@ -18,9 +19,11 @@ export class AppComponent {
 	
 	// Attributes
 		modules: IModule [];
+		resources: Resources;
 
 	// Methods
-		constructor () {
+		constructor (resources: Resources) {
+			this.resources = resources;
 			this.modules = [{
 				name: 'Proveedores',
 				actions: [{
