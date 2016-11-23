@@ -4,7 +4,7 @@ import {Component} from '@angular/core';
 	styles: [require('./style.styl').toString()],
 	template: require('./template.jade')(),
 })
-export class DemoComponent {
+export class DetailProveedorComponent {
 	
 	// Attributes
 
