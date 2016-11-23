@@ -33,10 +33,11 @@ export class AppComponent {
 				},
 				{
 					name: 'Listar',
-					path: '/list-provider'
+					
 				},
 				{
 					name: 'Ver detalles'
+					path: '/detail-provider'
 				}]
 			},
 			{
