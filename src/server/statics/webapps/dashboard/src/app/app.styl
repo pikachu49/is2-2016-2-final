@@ -1,2 +1,56 @@
-.container
-    background green
+
+top-bar-height = 80px
+left-panel-width = 250px
+subtitle-background = #9e3300 
+
+:host
+    .container
+        position absolute
+        left 0px
+        top 0px
+        width 100%
+        height 100%
+
+        .top-bar
+            position absolute
+            left 0px
+            top 0px
+            width 100%
+            height top-bar-height
+            background #000
+        
+        .left-panel
+            position absolute
+            left 0px
+            top top-bar-height
+            width left-panel-width
+            height "calc(100% - %s)" % top-bar-height
+            background #222
+
+            .subtitle
+                color #dedede
+                font-size 16px
+                text-align center
+                font-family Arial
+                font-weight normal
+                background subtitle-background
+                width 100%
+                height 40px
+                border none
+            
+            .actions-container
+                button
+                    width 100%
+                    height 40px
+                    border none
+                    background #000
+                    font-size 14px
+                    color #AAA
+        
+        .content-container
+            position absolute
+            left left-panel-width
+            top top-bar-height
+            width "calc(100% - %s)" % left-panel-width
+            height "calc(100% - %s)" % top-bar-height
+            background #EEE

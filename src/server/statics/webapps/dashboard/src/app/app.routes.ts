@@ -11,9 +11,15 @@ import {Component} from '@angular/core';
 })
 class Home {}
 
+@Component({
+  template: '<h3>Test 123</h3>'
+})
+class Test {}
+
 export const rootRouterConfig: Routes = [
   {path: '', redirectTo: 'home', terminal: true},
   {path: 'home', component: Home},
+  {path: 'test', component: Test},
   // {path: 'about', component: About},
   // {path: 'github', component: RepoBrowser,
   //   children: [
