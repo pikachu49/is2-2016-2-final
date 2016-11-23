@@ -2,6 +2,7 @@ import {Routes} from '@angular/router';
 import {Component} from '@angular/core';
 import {DetailProductComponent} from './components/DetailProduct/index.ts';
 import {RegisterProductLotComponent} from './components/RegisterProductLot/index.ts'; 
+import {ListProductLotComponent} from './components/ListProductLot/index.ts'; 
 // import {About} from './about/about';
 // import {Home} from './home/home';
 // import {RepoBrowser} from './github/repo-browser/repo-browser';
@@ -23,7 +24,8 @@ export const rootRouterConfig: Routes = [
   {path: 'home', component: Home},
   {path: 'test', component: Test},
   {path: 'detail-product', component: DetailProductComponent},
-  {path: 'register-product-lot', component: RegisterProductLotComponent}
+  {path: 'register-product-lot', component: RegisterProductLotComponent},
+  {path: 'list-product-lot', component: ListProductLotComponent}
   // {path: 'about', component: About},
   // {path: 'github', component: RepoBrowser,
   //   children: [

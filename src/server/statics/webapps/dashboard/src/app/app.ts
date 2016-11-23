@@ -53,10 +53,12 @@ export class AppComponent {
 			{
 				name: 'Lotes',
 				actions: [{
-					name: 'Registrar'
+					name: 'Registrar',
+					path: '/register-product-lot'
 				},
 				{
-					name: 'Listar'
+					name: 'Listar',
+					path: '/list-product-lot'
 				},
 				{
 					name: 'Ver detalles'
