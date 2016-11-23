@@ -63,7 +63,8 @@ export class AppComponent {
 					path: '/list-product-lot'
 				},
 				{
-					name: 'Ver detalles'
+					name: 'Ver detalles',
+					path: '/detail-lot'
 				}]
 			}]
 		}

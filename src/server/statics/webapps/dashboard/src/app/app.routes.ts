@@ -33,6 +33,9 @@ export const rootRouterConfig: Routes = [
   {path: 'list-product-lot', component: ListProductLotComponent},
   {path: 'list-provider', component: ListProviderComponent},
   {path: 'register-provider', component: RegisterProviderComponent}
+  
+
+  {path: 'detail-lot', component: DetailProductLotComponent} 
   // {path: 'about', component: About},
   // {path: 'github', component: RepoBrowser,
   //   children: [
