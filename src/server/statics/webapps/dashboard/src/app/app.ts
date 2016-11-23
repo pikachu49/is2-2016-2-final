@@ -1,7 +1,9 @@
 import {Component} from '@angular/core';
+import {Resources} from './services/Resources.ts';
 
 interface IAction {
 	name: string;
+	path?: string;
 }
 
 interface IModule {
@@ -18,9 +20,11 @@ export class AppComponent {
 	
 	// Attributes
 		modules: IModule [];
+		resources: Resources;
 
 	// Methods
-		constructor () {
+		constructor (resources: Resources) {
+			this.resources = resources;
 			this.modules = [{
 				name: 'Proveedores',
 				actions: [{
@@ -30,7 +34,7 @@ export class AppComponent {
 					name: 'Listar'
 				},
 				{
-					name: 'Buscar'
+					name: 'Ver detalles'
 				}]
 			},
 			{
@@ -42,7 +46,20 @@ export class AppComponent {
 					name: 'Listar'
 				},
 				{
-					name: 'Buscar'
+					name: 'Ver detalles',
+					path: '/detail-product'
+				}]
+			},
+			{
+				name: 'Lotes',
+				actions: [{
+					name: 'Registrar'
+				},
+				{
+					name: 'Listar'
+				},
+				{
+					name: 'Ver detalles'
 				}]
 			}]
 		}
