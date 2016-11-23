@@ -28,10 +28,12 @@ export class AppComponent {
 			this.modules = [{
 				name: 'Proveedores',
 				actions: [{
-					name: 'Registrar'
+					name: 'Registrar',
+					path: '/register-provider'
 				},
 				{
-					name: 'Listar'
+					name: 'Listar',
+					path: '/list-provider'
 				},
 				{
 					name: 'Ver detalles'
