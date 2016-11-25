@@ -2,6 +2,10 @@ import {Injectable} from '@angular/core';
 import config from '../../../../../../../settings/index.ts';
 import * as q from 'q';
 import {Response, Http} from '@angular/http';
+import {Observable} from 'rxjs/Rx';
+import {RequestParams as GetLotRequestParams, ResponseBody as GetLotResponseBody} from '../../../../../../../server/routers/handlers/lot/getLot/interface.ts';
+import {RequestParams as GetProviderRequestParams, ResponseBody as GetProviderResponseBody} from '../../../../../../../server/routers/handlers/provider/getProvider/interface.ts';
+import {RequestParams as GetProviderProductsRequestParams, ResponseBody as GetProviderProductsResponseBody} from '../../../../../../../server/routers/handlers/provider/getProviderProducts/interface.ts';
 
 @Injectable()
 export class Resources {
@@ -26,42 +30,75 @@ export class Resources {
                     url = url.replace(':'+param, '');
                     return;
                 }
-                // url = url.replace(':'+param+'/', params[param]);
                 url = url.replace(':'+param, params[param]);
             });
             return url;
         }
 
-        private request (serviceName: string, data: any, urlParams: any) {
-            let deferred = q.defer();
+        private request<T> (serviceName: string, urlParams: any, data: any): Observable<T> {
+            urlParams = (urlParams || {});
             var service = config.apiServices[serviceName];
-            return deferred.promise;
+            var response = null;
+            service.url = this.domain+this.processUrl(service.url, urlParams);
+            if (data) {
+                response = this.$http[service.method.toLowerCase()](service.url, data);
+            }
+            else {
+                response = this.$http[service.method.toLowerCase()](service.url);
+            }
+            return response.map((data:Response) => data.json());
         }
 
-        public registerPerson () {}
+        public registerPerson (params: { urlParams: any; data: any }): Observable<any> {
+            return this.request('registerPerson', params.urlParams, params.data);
+        }
 
-        public createSession () {}
+        public createSession (params: { urlParams: any; data: any }): Observable<any> {
+            return this.request('createSession', params.urlParams, params.data);
+        }
 
-        public deleteSession () {}
+        public deleteSession (params: { urlParams: any; data: any }): Observable<any> {
+            return this.request('deleteSession', params.urlParams, params.data);
+        }
 
-        public registerUser () {}
+        public registerUser (params: { urlParams: any; data: any }): Observable<any> {
+            return this.request('registerUser', params.urlParams, params.data);
+        }
 
-        public registerProvider () {}
+        public registerProvider (params: { urlParams: any; data: any }): Observable<any> {
+            return this.request('registerProvider', params.urlParams, params.data);
+        }
 
-        public registerProviderProduct () {}
+        public registerProviderProduct (params: { urlParams: any; data: any }): Observable<any> {
+            return this.request('registerProviderProduct', params.urlParams, params.data);
+        }
 
-        public registerProductLot () {}
+        public registerProductLot (params: { urlParams: any; data: any }): Observable<any> {
+            return this.request('registerProductLot', params.urlParams, params.data);
+        }
 
-        public getProviders () {}
+        public getProviders (params: { urlParams: any; data: any }): Observable<any> {
+            return this.request('getProviders', params.urlParams, params.data);
+        }
 
-        public getProvider () {}
+        public getProvider (params: { urlParams: { providerId: string }; data: GetProviderRequestParams }): Observable<GetProviderResponseBody> {
+            return this.request('getProvider', params.urlParams, params.data);
+        }
 
-        public getProviderProducts () {}
+        public getProviderProducts (params: { urlParams: { providerId: string }; data: GetProviderProductsRequestParams }): Observable<GetProviderProductsResponseBody> {
+            return this.request('getProviderProducts', params.urlParams, params.data);
+        }
 
-        public getProduct () {}
+        public getProduct (params: { urlParams: any; data: any }): Observable<any> {
+            return this.request('getProduct', params.urlParams, params.data);
+        }
 
-        public getProductLots () {}
+        public getProductLots (params: { urlParams: any; data: any }): Observable<any> {
+            return this.request('getProductLots', params.urlParams, params.data);
+        }
 
-        public getLot () {}
+        public getLot (params: { urlParams: { lotId: string }; data: GetLotRequestParams }): Observable<GetLotResponseBody> {
+            return this.request('getLot', params.urlParams, params.data);
+        }
 
 }

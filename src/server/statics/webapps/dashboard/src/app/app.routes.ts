@@ -44,7 +44,11 @@ export const rootRouterConfig: Routes = [
   {path: 'detail-lot', component: DetailProductLotComponent},
   {path: 'register-product', component: RegisterProductComponent},
   {path: 'list-product', component: ListProductComponent},
+<<<<<<< HEAD
   {path: 'detail-provider', component: DetailProveedorComponent},
+=======
+  {path: 'detail-provider', component: DetailProveedorComponent}
+>>>>>>> 11683a74fb734d7e578e2a2b854b2e82e7bff852
 
   {path: 'register-product', component: RegisterProductComponent} 
   // {path: 'about', component: About},
