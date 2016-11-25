@@ -40,7 +40,7 @@ export const rootRouterConfig: Routes = [
   {path: 'register-provider', component: RegisterProviderComponent},
   {path: 'detail-lot', component: DetailProductLotComponent},
   {path: 'register-product', component: RegisterProductComponent},
-  {path: 'list-product', component: ListProductComponent}
+  {path: 'list-product', component: ListProductComponent},
   {path: 'detail-provider', component: DetailProveedorComponent}
 
   // {path: 'about', component: About},
