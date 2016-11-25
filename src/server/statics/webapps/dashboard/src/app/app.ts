@@ -47,9 +47,6 @@ export class AppComponent {
 
 					path: '/register-product'
 				},
-					path:'/register-product'
-				},	
-
 				{
 					name: 'Listar',
 					path: '/list-product'

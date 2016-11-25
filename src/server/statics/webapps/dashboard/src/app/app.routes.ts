@@ -11,7 +11,7 @@ import {RegisterProductComponent} from './components/RegisterProduct/index.ts';
 import {ListProductComponent} from './components/ListProduct/index.ts';
 import {DetailProveedorComponent} from './components/DetailProveedor/index.ts'; 
 
-import {RegisterProductComponent} from './components/RegisterProduct/index.ts'; 
+
 
 
  
