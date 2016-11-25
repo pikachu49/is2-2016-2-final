@@ -3,10 +3,12 @@ import {Component} from '@angular/core';
 import {DetailProductComponent} from './components/DetailProduct/index.ts';
 import {RegisterProductLotComponent} from './components/RegisterProductLot/index.ts'; 
 import {ListProductLotComponent} from './components/ListProductLot/index.ts'; 
-
 import {RegisterProviderComponent} from './components/RegisterProvider/index.ts'; 
 import {ListProviderComponent} from './components/ListProvider/index.ts'; 
 import {DetailProductLotComponent} from './components/DetailLot/index.ts'; 
+import {RegisterProductComponent} from './components/RegisterProduct/index.ts'; 
+ 
+
 
 
 // import {About} from './about/about';
@@ -34,9 +36,8 @@ export const rootRouterConfig: Routes = [
   {path: 'list-product-lot', component: ListProductLotComponent},
   {path: 'list-provider', component: ListProviderComponent},
   {path: 'register-provider', component: RegisterProviderComponent},
-  
-
-  {path: 'detail-lot', component: DetailProductLotComponent}
+  {path: 'detail-lot', component: DetailProductLotComponent},
+  {path: 'register-product', component: RegisterProductComponent}
   // {path: 'about', component: About},
   // {path: 'github', component: RepoBrowser,
   //   children: [
