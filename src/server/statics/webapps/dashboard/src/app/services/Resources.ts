@@ -6,6 +6,7 @@ import {Observable} from 'rxjs/Rx';
 import {RequestParams as GetLotRequestParams, ResponseBody as GetLotResponseBody} from '../../../../../../../server/routers/handlers/lot/getLot/interface.ts';
 import {RequestParams as GetProviderRequestParams, ResponseBody as GetProviderResponseBody} from '../../../../../../../server/routers/handlers/provider/getProvider/interface.ts';
 import {RequestParams as GetProviderProductsRequestParams, ResponseBody as GetProviderProductsResponseBody} from '../../../../../../../server/routers/handlers/provider/getProviderProducts/interface.ts';
+import {RequestParams as RegisterProviderRequestParams, ResponseBody as RegisterProviderResponseBody} from '../../../../../../../server/routers/handlers/provider/registerProvider/interface.ts';
 
 @Injectable()
 export class Resources {
@@ -39,12 +40,12 @@ export class Resources {
             urlParams = (urlParams || {});
             var service = config.apiServices[serviceName];
             var response = null;
-            service.url = this.domain+this.processUrl(service.url, urlParams);
+            var url = this.domain+this.processUrl(service.url, urlParams);
             if (data) {
-                response = this.$http[service.method.toLowerCase()](service.url, data);
+                response = this.$http[service.method.toLowerCase()](url, data);
             }
             else {
-                response = this.$http[service.method.toLowerCase()](service.url);
+                response = this.$http[service.method.toLowerCase()](url);
             }
             return response.map((data:Response) => data.json());
         }
@@ -65,7 +66,7 @@ export class Resources {
             return this.request('registerUser', params.urlParams, params.data);
         }
 
-        public registerProvider (params: { urlParams: any; data: any }): Observable<any> {
+        public registerProvider (params: { urlParams: any; data: RegisterProviderRequestParams }): Observable<any> {
             return this.request('registerProvider', params.urlParams, params.data);
         }
 
