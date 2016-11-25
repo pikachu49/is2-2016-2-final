@@ -44,8 +44,12 @@ export class AppComponent {
 				name: 'Productos',
 				actions: [{
 					name: 'Registrar',
+
 					path: '/register-product'
 				},
+					path:'/register-product'
+				},	
+
 				{
 					name: 'Listar',
 					path: '/list-product'
