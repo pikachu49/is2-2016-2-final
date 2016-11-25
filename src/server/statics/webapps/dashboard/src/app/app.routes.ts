@@ -7,7 +7,8 @@ import {RegisterProviderComponent} from './components/RegisterProvider/index.ts'
 import {ListProviderComponent} from './components/ListProvider/index.ts'; 
 import {DetailProductLotComponent} from './components/DetailLot/index.ts'; 
 import {RegisterProductComponent} from './components/RegisterProduct/index.ts'; 
-import {ListProductComponent} from './components/ListProduct/index.ts'; 
+import {ListProductComponent} from './components/ListProduct/index.ts';
+import {DetailProveedorComponent} from './components/DetailProveedor/index.ts'; 
 
 
 
@@ -40,7 +41,7 @@ export const rootRouterConfig: Routes = [
   {path: 'detail-lot', component: DetailProductLotComponent},
   {path: 'register-product', component: RegisterProductComponent},
   {path: 'list-product', component: ListProductComponent}
-
+  {path: 'detail-provider', component: DetailProveedorComponent}
 
   // {path: 'about', component: About},
   // {path: 'github', component: RepoBrowser,
