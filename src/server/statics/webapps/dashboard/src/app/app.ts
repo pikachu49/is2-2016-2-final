@@ -36,7 +36,8 @@ export class AppComponent {
 					path: '/list-provider'
 				},
 				{
-					name: 'Ver detalles'
+					name: 'Ver detalles',
+					path: '/detail-provider'
 				}]
 			},
 			{
