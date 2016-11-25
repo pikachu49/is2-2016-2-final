@@ -46,7 +46,8 @@ export class AppComponent {
 					path: '/register-product'
 				},
 				{
-					name: 'Listar'
+					name: 'Listar',
+					path: '/list-product'
 				},
 				{
 					name: 'Ver detalles',

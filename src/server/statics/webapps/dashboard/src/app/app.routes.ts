@@ -7,10 +7,11 @@ import {RegisterProviderComponent} from './components/RegisterProvider/index.ts'
 import {ListProviderComponent} from './components/ListProvider/index.ts'; 
 import {DetailProductLotComponent} from './components/DetailLot/index.ts'; 
 import {RegisterProductComponent} from './components/RegisterProduct/index.ts'; 
+import {ListProductComponent} from './components/ListProduct/index.ts'; 
+
+
+
  
-
-
-
 // import {About} from './about/about';
 // import {Home} from './home/home';
 // import {RepoBrowser} from './github/repo-browser/repo-browser';
@@ -37,7 +38,10 @@ export const rootRouterConfig: Routes = [
   {path: 'list-provider', component: ListProviderComponent},
   {path: 'register-provider', component: RegisterProviderComponent},
   {path: 'detail-lot', component: DetailProductLotComponent},
-  {path: 'register-product', component: RegisterProductComponent}
+  {path: 'register-product', component: RegisterProductComponent},
+  {path: 'list-product', component: ListProductComponent}
+
+
   // {path: 'about', component: About},
   // {path: 'github', component: RepoBrowser,
   //   children: [
