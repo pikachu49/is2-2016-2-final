@@ -1,13 +1,10 @@
-h1 Register Product Lot Component
+div
+    form
+        p
+            span code : 
+            input([(ngModel)]="lot.code", type="text", name="lotCode")
 
-form(name="add-estimation", method="post")
-        div.input
-            span.label Code: 
-            input(type="text", name="code")
-        div.input
-            span.label ProveedorId: 
-            input(type="text", name="proveedorId")
-
-        div.actions
-            input(type="submit", value="Registrar")
-
+            span productId : 
+            input([(ngModel)]="lot.productId", type="text", name="lotProductId")
+        p
+            button((click)="submitRegister()") Submit

@@ -8,6 +8,8 @@ import {RequestParams as GetProviderRequestParams, ResponseBody as GetProviderRe
 import {RequestParams as GetProviderProductsRequestParams, ResponseBody as GetProviderProductsResponseBody} from '../../../../../../../server/routers/handlers/provider/getProviderProducts/interface.ts';
 import {RequestParams as RegisterProviderRequestParams, ResponseBody as RegisterProviderResponseBody} from '../../../../../../../server/routers/handlers/provider/registerProvider/interface.ts';
 
+import {RequestParams as RegisterProductLotRequestParams, ResponseBody as RegisterProductLotResponseBody} from '../../../../../../../server/routers/handlers/product/registerProductLot/interface.ts';
+
 @Injectable()
 export class Resources {
 
@@ -74,7 +76,7 @@ export class Resources {
             return this.request('registerProviderProduct', params.urlParams, params.data);
         }
 
-        public registerProductLot (params: { urlParams: any; data: any }): Observable<any> {
+        public registerProductLot (params: { urlParams: any; data: RegisterProductLotRequestParams }): Observable<any> {
             return this.request('registerProductLot', params.urlParams, params.data);
         }
 
