@@ -55,6 +55,25 @@
 				return deferred.promise;
 			}
 
+			public insertMany (dataArray: any []) {
+				let deferred = Q.defer();
+				this.collection.insertMany(dataArray, (err, resp) => {
+					if (err) {
+						deferred.reject(err);
+						return;
+					}
+					var records = (resp.ops || []).map((rec) => {
+						rec.id = rec._id.toString();
+						return rec;
+					});
+					records.forEach((rec) => {
+						this.update(rec.id, rec);
+					});
+					deferred.resolve(records);
+				});
+				return deferred.promise;
+			}
+
 			public updateOrCreate (criteria: any, data: any) {
 				let deferred = Q.defer();
 				this.collection.update(criteria, data, {
