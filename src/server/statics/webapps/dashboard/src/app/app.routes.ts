@@ -44,6 +44,7 @@ export const rootRouterConfig: Routes = [
   {path: 'detail-lot', component: DetailProductLotComponent},
   {path: 'register-product', component: RegisterProductComponent},
   {path: 'list-product', component: ListProductComponent},
+
   {path: 'detail-provider', component: DetailProveedorComponent},
 
   {path: 'register-product', component: RegisterProductComponent} 
