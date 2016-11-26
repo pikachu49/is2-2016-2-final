@@ -1,5 +1,4 @@
 {
-
     "registerPerson": {
         "path": "/register",
         "method": "POST",
@@ -70,5 +69,4 @@
         "path": "/lots/:lotId",
         "method": "GET"
     }
-
 }
