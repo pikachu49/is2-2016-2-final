@@ -1,16 +1,8 @@
-h1 RegisterProduct Component
-doctype html
-html
-  head
-    title my jade template
-  body
-    h1 Hello #{name}
-    form(name="add-estimation", method="post")
-        div.input
-            span.label Nombre
-            input(type="text", name="title")
-        div.input
-            span.label ProveedorId
-            input(type="text", name="proveedr")
-        div.actions
-            input(type="submit", value="Registrar")
+div
+    form
+        p
+            span Product name
+            input([(ngModel)]="product.name", type="text", name="productName")
+        p
+            button((click)="submitRegister()") Submit
+
