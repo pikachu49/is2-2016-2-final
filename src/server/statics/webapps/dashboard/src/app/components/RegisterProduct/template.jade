@@ -1,16 +1,11 @@
-h1 RegisterProduct Component
-doctype html
-html
-  head
-    title my jade template
-  body
-    h1 Hello #{name}
-    form(name="add-estimation", method="post")
-        div.input
-            span.label Nombre
-            input(type="text", name="title")
-        div.input
-            span.label ProveedorId
-            input(type="text", name="proveedr")
-        div.actions
+h1 Register Product Component
+div
+    form
+        p
+            span.label Producto:
+            input(type="text", name="product")
+        p
+            span.label Proveedor Id:
+            input(type="text", name="provider")
+        p
             input(type="submit", value="Registrar")
