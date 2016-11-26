@@ -1,5 +1,5 @@
 import {RequestParams} from './interface.ts';
-import {getProviderByProductId} from '../../../../../core/db-transactions/product.ts';
+import {getProviderByProductId} from '../../../../../core/db-transactions/Product.ts';
 
 export function handler (req, res, next) {
     getProviderByProductId(req.params.providerId).then(function (productsInstances) {

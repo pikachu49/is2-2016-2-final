@@ -1,5 +1,5 @@
 import {RequestParams} from './interface.ts';
-import {getLotById} from '../../../../../core/db-transactions/lot.ts';
+import {getLotById} from '../../../../../core/db-transactions/Lot.ts';
 
 export function handler (req, res, next) {
     getLotById(req.params.lotId).then(function (lotInstance) {
