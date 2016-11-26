@@ -1,1 +1,7 @@
-h1 RegisterProvider Component
+div
+    form
+        p
+            span Provider name
+            input([(ngModel)]="provider.name", type="text", name="providerName")
+        p
+            button((click)="submitRegister()") Submit
