@@ -10,12 +10,14 @@ import {Resources} from '../../services/Resources.ts';
 export class ListProductComponent implements OnInit {
 	
 	// Attributes
-		product: Product;
+		products: Product [];
 		resources: Resources;
+		currentProvider: Provider;
 		providers: Provider[];
 
 	// Methods
 		constructor (resources: Resources) {
+			this.currentProvider = null;
 			this.providers = [];
 			this.resources = resources;
 			this.product = {
@@ -34,13 +36,16 @@ export class ListProductComponent implements OnInit {
 			})
 		}
 
-		getProducts(){
-			this.resources.getProviderProducts({
-				urlParams: { providerId: '' },
-				data: {}
-			}).subscribe((resp) => {
-				console.log(resp);
-			})
+		getProducts () {
+			setTimeout(() => {
+				this.resources.getProviderProducts({
+					urlParams: { providerId: this.currentProvider.id },
+					data: {}
+				}).subscribe((resp) => {
+					console.log(resp);
+				})
+			}, 10);
 		}
+		
 
 }

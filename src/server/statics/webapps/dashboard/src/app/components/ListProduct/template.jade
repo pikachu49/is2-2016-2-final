@@ -2,7 +2,7 @@ h1 List Product
 
 h3 Buscar:
 h3 Filtrar:
-    select
-        option(*ngFor="let provider of providers") {{ provider.name }}
+    select([(ngModel)]="currentProvider", (change)="getProducts()")
+        option(*ngFor="let provider of providers", [ngValue]="provider") {{ provider.name }}
 
-
+p {{ (currentProvider || {}).name }}
