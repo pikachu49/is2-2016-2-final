@@ -9,6 +9,8 @@
         "lot": { "name": "lot" },
         "product": { "name": "product" },
         "provider": { "name": "provider" },
-        "session": { "name": "session" }
+        "session": { "name": "session" },
+        "order": { "name": "order" },
+        "orderLot": { "name": "orderlot" }
     }
 }
