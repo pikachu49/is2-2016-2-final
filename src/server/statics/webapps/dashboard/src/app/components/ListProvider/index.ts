@@ -9,6 +9,7 @@ import {Resources} from '../../services/Resources.ts';
 export class ListProviderComponent {
 	
 	// Attributes
+	//test
 	providers: Provider[];
 	resources: Resources;
 
