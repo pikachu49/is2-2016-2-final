@@ -8,21 +8,19 @@ import {Resources} from '../../services/Resources.ts';
 export class RegisterProductComponent implements OnInit {
 	
 	// Attributes
-		product: Product;
-		resources: Resources
+		product: Product[];
+		resources: Resources;
+		//providers:Provider[]
 	// Methods
 		constructor (resources: Resources) {
 			this.resources = resources;
-			this.product = {
-				name: ''
-			}
 		}
 		ngOnInit () {}
 		submitRegister () {
-			this.resources.RegisterProduct({
+			this.resources.registerProduct({
 				urlParams: {},
 				data: {
-					name: this.product.name 
+					name: this.product 
 				} 
 			}).subscribe((resp) => {
 				console.log(resp);

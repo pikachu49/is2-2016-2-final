@@ -101,7 +101,7 @@ export class Resources {
         public getLot (params: { urlParams: { lotId: string }; data: GetLotRequestParams }): Observable<GetLotResponseBody> {
             return this.request('getLot', params.urlParams, params.data);
         }
-        public registertProduct (params: { urlParams: any; data: registertProductRequestParams }): Observable<any> {
+        public registerProduct (params: { urlParams: any; data: any }): Observable<any> {
             return this.request('registerProduct', params.urlParams, params.data);
         }
-}
+}       
