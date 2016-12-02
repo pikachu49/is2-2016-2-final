@@ -1,1 +1,12 @@
-h1 Register Product Lot Component
+h1 List Product 
+
+h3 Buscar:
+h3 Filtrar por Providers:
+    select([(ngModel)]="currentProvider", (change)="getProducts()")
+        option(*ngFor="let provider of providers", [ngValue]="provider") {{ provider.name }}
+
+//- h3 Filtrar por Products:
+//-     select([(ngModel)]="currentProvider", (change)="getProductLots()")
+//-         option(*ngFor="let product of products", [ngValue]="product") {{ product.name }}
+
+p {{ (currentProvider || {}).name }}
