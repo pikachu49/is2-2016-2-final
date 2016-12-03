@@ -5,4 +5,8 @@ h3 Filtrar:
     select([(ngModel)]="currentProvider", (change)="getProducts()")
         option(*ngFor="let provider of providers", [ngValue]="provider") {{ provider.name }}
 
-p {{ (currentProvider || {}).name }}
+p Products from {{ (currentProvider || {}).name }}:
+
+ul(*ngIf="products.length")
+    li(*ngFor="let product of products")
+        span (id: {{ product.id }}) {{ product.name }} 
