@@ -1,28 +1,14 @@
-h1 Register lot
+h1 Register Product Lot Component
 
-h3 Buscar:
-h3 Filtrar por Providers:
-    select([(ngModel)]="currentProvider", (change)="getProducts()")
-        option(*ngFor="let provider of providers", [ngValue]="provider") {{ provider.name}}
+form(name="add-estimation", method="post")
+        div.input
+            span.label Code: 
+            input(type="text", name="code")
+        div.input
+            span.label ProveedorId: 
+            input(type="text", name="proveedorId")
 
-div(*ngIf="currentProvider")
-    h3 Filtrar por Products:
-    select([(ngModel)]="currentProduct")
-        option(*ngFor="let product of products", [ngValue]="product") {{ product.name }}
+        div.actions
+            input(type="submit", value="Registrar")
 
-form(*ngIf="currentProduct")
-    
-    p 
-        span Provider   : 
-        span {{ currentProvider.name }}
-    
-    p 
-        span Product    : 
-        span {{ currentProduct.name }}
-    
-    p
-        span Code   :
-        input([(ngModel)]="lot.code", name="code")
-    
-    p
-        button((click)="submitRegisterLot()") Submit
+
