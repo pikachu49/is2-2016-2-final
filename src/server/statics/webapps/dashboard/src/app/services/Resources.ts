@@ -74,8 +74,8 @@ export class Resources {
         public registerProviderProduct (params: { urlParams: any; data: any }): Observable<any> {
             return this.request('registerProviderProduct', params.urlParams, params.data);
         }
-
-        public registerProductLot (params: { urlParams: any; data: any }): Observable<any> {
+        
+        public registerProductLot (params: { urlParams: { productId: string }; data: GetProductLotRequestParams }): Observable<GetProductLotResponseBody> {
             return this.request('registerProductLot', params.urlParams, params.data);
         }
 
@@ -87,7 +87,7 @@ export class Resources {
             return this.request('getProvider', params.urlParams, params.data);
         }
 
-        public getProviderProducts (params: { urlParams: { providerId: string }; data: GetProviderProductsRequestParams }): Observable<GetProviderProductsResponseBody> {
+        public getProviderProducts (params: { urlParams: { providerId: string }; data: GetProviderProductsRequestParams }): Observable<any> {
             return this.request('getProviderProducts', params.urlParams, params.data);
         }
 
