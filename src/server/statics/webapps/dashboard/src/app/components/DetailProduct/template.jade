@@ -1,1 +1,18 @@
-h1 DetailProduct Component
+h1 List Product
+
+h3 Buscar:
+h3 Filtrar:
+    select([(ngModel)]="currentProvider", (change)="getProducts()")
+        option(*ngFor="let provider of providers", [ngValue]="provider") {{ provider.name }}
+
+p Products from {{ (currentProvider || {}).name }}:
+
+div(*ngIf="currentProvider")
+    h3 Filtrar por Products:
+    select([(ngModel)]="currentProduct")
+        option(*ngFor="let product of products", [ngValue]="product") {{ product.name }}
+
+p
+    span nombre: {{ (currentProduct || {}).name }}:
+
+ 

@@ -1,1 +1,12 @@
-h1 List Product Component
+h1 List Product
+
+h3 Buscar:
+h3 Filtrar:
+    select([(ngModel)]="currentProvider", (change)="getProducts()")
+        option(*ngFor="let provider of providers", [ngValue]="provider") {{ provider.name }}
+
+p Products from {{ (currentProvider || {}).name }}:
+
+ul(*ngIf="products.length")
+    li(*ngFor="let product of products")
+        span (id: {{ product.id }}) {{ product.name }} 
