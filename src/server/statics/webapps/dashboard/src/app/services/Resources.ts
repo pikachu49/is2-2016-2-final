@@ -7,6 +7,7 @@ import {RequestParams as GetLotRequestParams, ResponseBody as GetLotResponseBody
 import {RequestParams as GetProviderRequestParams, ResponseBody as GetProviderResponseBody} from '../../../../../../../server/routers/handlers/provider/getProvider/interface.ts';
 import {RequestParams as GetProviderProductsRequestParams, ResponseBody as GetProviderProductsResponseBody} from '../../../../../../../server/routers/handlers/provider/getProviderProducts/interface.ts';
 import {RequestParams as RegisterProviderRequestParams, ResponseBody as RegisterProviderResponseBody} from '../../../../../../../server/routers/handlers/provider/registerProvider/interface.ts';
+import {RequestParams as GetProductLotRequestParams, ResponseBody as GetProductLotResponseBody} from '../../../../../../../server/routers/handlers/lot/getLot/interface.ts';
 
 @Injectable()
 export class Resources {
@@ -73,8 +74,8 @@ export class Resources {
         public registerProviderProduct (params: { urlParams: any; data: any }): Observable<any> {
             return this.request('registerProviderProduct', params.urlParams, params.data);
         }
-
-        public registerProductLot (params: { urlParams: any; data: any }): Observable<any> {
+        
+        public registerProductLot (params: { urlParams: { productId: string }; data: GetProductLotRequestParams }): Observable<GetProductLotResponseBody> {
             return this.request('registerProductLot', params.urlParams, params.data);
         }
 
@@ -86,7 +87,7 @@ export class Resources {
             return this.request('getProvider', params.urlParams, params.data);
         }
 
-        public getProviderProducts (params: { urlParams: { providerId: string }; data: GetProviderProductsRequestParams }): Observable<GetProviderProductsResponseBody> {
+        public getProviderProducts (params: { urlParams: { providerId: string }; data: GetProviderProductsRequestParams }): Observable<any> {
             return this.request('getProviderProducts', params.urlParams, params.data);
         }
 
@@ -94,7 +95,7 @@ export class Resources {
             return this.request('getProduct', params.urlParams, params.data);
         }
 
-        public getProductLots (params: { urlParams: any; data: any }): Observable<any> {
+        public getProductLots (params: { urlParams: { productId: string}; data: GetProductLotRequestParams }): Observable<GetProductLotResponseBody> {
             return this.request('getProductLots', params.urlParams, params.data);
         }
 
