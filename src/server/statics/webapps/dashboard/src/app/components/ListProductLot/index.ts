@@ -7,9 +7,9 @@ import {Resources} from '../../services/Resources.ts';
 	template: require('./template.jade')(),
 })
 export class ListProductLotComponent {
-	
+
 	// Attributes
-	lots:Lot[];
+	lots:Lot[];			
 	resources: Resources;
 	// Methods
 		constructor (Resources: Resources) {
@@ -26,4 +26,5 @@ export class ListProductLotComponent {
 				console.log(resp);
 			})
 		}
+
 }
