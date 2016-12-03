@@ -1,2 +1,5 @@
 h3 List providers:
-div(*ngFor="let provider of providers") {{ provider.name }}
+div(*ngFor="let provider of providers") 
+    ul
+        li
+            a {{ provider.name }}
