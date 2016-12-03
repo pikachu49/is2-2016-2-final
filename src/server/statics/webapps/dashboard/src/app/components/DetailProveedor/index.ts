@@ -29,4 +29,15 @@ export class DetailProveedorComponent implements OnInit {
 			})
 		}	
 
+		getProducts () {
+ 			setTimeout(() => {
+ 				this.resources.getProviderProducts({
+ 					urlParams: { providerId: this.currentProvider.id },
+ 					data: {}
+ 				}).subscribe((resp) => {
+ 					console.log(resp);
+ 				})
+ 			}, 10);
+  		}
+
 }
