@@ -1,17 +1,18 @@
-h1 Detail Product
+h1 List Product
 
-<div>
-<table border="1">
-<tr>
-<td>Cod</td>
-<td>Nombre</td>
-<td>Proveedor</td>
-</tr>
-<tr>
-<td>02</td>
-<td>Fanta</td>
-<td>Coca-cola</td>
-</tr>
+h3 Buscar:
+h3 Filtrar:
+    select([(ngModel)]="currentProvider", (change)="getProducts()")
+        option(*ngFor="let provider of providers", [ngValue]="provider") {{ provider.name }}
 
-</table>
-</div>
+p Products from {{ (currentProvider || {}).name }}:
+
+div(*ngIf="currentProvider")
+    h3 Filtrar por Products:
+    select([(ngModel)]="currentProduct")
+        option(*ngFor="let product of products", [ngValue]="product") {{ product.name }}
+
+p
+    span nombre: {{ (currentProduct || {}).name }}:
+
+ 
