@@ -10,7 +10,7 @@ import {Resources} from '../../services/Resources.ts';
 export class ListProductComponent implements OnInit {
 	
 	// Attributes
-		products: Product [];
+		products: Product ; // solo poner Product []; porque con eso sale error en webpack
 		resources: Resources;
 		currentProvider: Provider;
 		//currentProduct: Product;

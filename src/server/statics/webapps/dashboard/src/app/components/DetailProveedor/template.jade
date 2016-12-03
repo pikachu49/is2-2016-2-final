@@ -1,1 +1,11 @@
-h1 DetailProveedor Component
+h3 Buscar: 
+    input
+h3 Filtrar:
+    select([(ngModel)]="currentProvider", (change)="getProducts()")
+        option(*ngFor="let provider of providers", [ngValue]="provider") {{ provider.name }}
+  
+p Id proveedor: {{ (currentProvider || {}).id }}
+<br>
+p nombre del proveedor:  {{ (currentProvider || {}).name }}
+
+    
